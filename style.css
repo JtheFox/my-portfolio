@@ -58,6 +58,7 @@ a {
 }
 
 /* card child elements */
+/* card header */
 .card-header * {
     margin: 0;
 }
@@ -70,6 +71,7 @@ a {
     color: #888;
 }
 
+/* card body */
 .card-body {
     padding: 1rem 0;
     flex-grow: 1;
@@ -81,10 +83,11 @@ a {
     max-width: 105%;
     border-radius: 0.5rem;
     opacity: 90%;
-    margin-left: -0.5rem;
+    margin-left: -0.25rem;
     height: auto;
 }
 
+/* card footer */
 .card-link {
     display: flex;
     align-items: center;
@@ -100,4 +103,26 @@ a {
 
 .card-link:hover p {
     text-decoration: underline;
+}
+
+.card-keywords {
+    display: flex;
+    margin: 1rem 0 0 -0.5rem;
+    opacity: 75%;
+}
+
+.card-keywords > p {
+    color: #FFF;
+    margin: 0;
+}
+
+.card-keywords > p:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.card-keywords > p {
+    padding: 0.2rem 0.4rem;
+    border: 0.1rem solid #666;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.05);
 }
