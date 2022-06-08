@@ -1,11 +1,103 @@
+/* global elements */
 :root {
     font-family: monospace, monospace;
+    --primary: rgb(20, 20, 26);
+    --secondary: rgb(27, 27, 41);
 }
 
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(180deg, rgb(27, 27, 41) 10%, rgb(20,19,26) 40%, rgb(20,19,26) 70%, rgb(27, 27, 41) 90%)  no-repeat center center fixed;
+    background-color: var(--primary);
+    background: linear-gradient(180deg, var(--secondary) 10%, var(--primary) 40%, var(--primary) 70%, var(--secondary) 90%)  no-repeat center center fixed;
     background-size: cover;
     color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* global FA icon styling */
+.fa-lg {
+    color: white;
+}
+
+/* project cards */
+.card-list {
+    display: flex;
+    padding: 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 300px;
+    min-height: 250px;
+    width: 250px;
+    min-width: 200px;
+    padding: 1.5rem 2rem;
+    background-color: var(--primary);
+    border-radius: 1rem;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+    transform: translateX(3rem);
+}
+
+.card:not(:first-child) {
+    margin-left: -3rem;
+}
+
+/* card child elements */
+.card-header * {
+    margin: 0;
+}
+
+.card-header > *:not(:last-child)  {
+    margin-bottom: 0.5em;
+}
+
+.card-date {
+    color: #888;
+}
+
+.card-body {
+    padding: 1rem 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.card-body img {
+    max-width: 105%;
+    border-radius: 0.5rem;
+    opacity: 90%;
+    margin-left: -0.5rem;
+    height: auto;
+}
+
+.card-link {
+    display: flex;
+    align-items: center;
+}
+
+.card-link:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.card-link p {
+    margin: 0;
+}
+
+.card-link:hover p {
+    text-decoration: underline;
 }
