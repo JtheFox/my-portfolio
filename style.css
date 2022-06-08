@@ -20,8 +20,18 @@ a {
 }
 
 /* global FA icon styling */
-.fa-lg {
+[class*="fa-"] {
     color: white;
+}
+
+/* portfolio page header */
+.page-header {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    margin: 0 auto;
 }
 
 /* projects container */
@@ -33,7 +43,7 @@ a {
 }
 
 .projects > h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 /* project cards */
