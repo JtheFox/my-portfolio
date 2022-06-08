@@ -1,10 +1,17 @@
+const myLinks = myLinksJSON;
 const projectData = projectsJSON;
 
 $(function () {
+    $('.header-links').append($(myLinks.links.map(link => `<a href="${link.url}"><i class="${link.fa_icon} fa-lg"></i></a>`).join('<div class="link-divider"></div>')));
+
     projectData.projects.forEach(project => {
         $('.project-cards').append(newCard(project));
     });
 });
+
+function newLink(link) {
+    return `<a href="${link.url}"><i class="${link.fa_icon} fa-lg"></i></a>`;
+}
 
 function newCard(project) {
     return $(`<article class="card">

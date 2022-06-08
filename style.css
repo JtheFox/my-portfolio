@@ -3,13 +3,13 @@
     font-family: monospace, monospace;
     --primary: rgb(20, 20, 26);
     --secondary: rgb(27, 27, 41);
+    --bg-gradient: linear-gradient(180deg, var(--secondary) 10%, var(--primary) 40%, var(--primary) 70%, var(--secondary) 90%)  no-repeat center center fixed;
 }
 
 body {
     padding: 0;
     margin: 0;
-    background-color: var(--primary);
-    background: linear-gradient(180deg, var(--secondary) 10%, var(--primary) 40%, var(--primary) 70%, var(--secondary) 90%)  no-repeat center center fixed;
+    background-color: var(--secondary);
     background-size: cover;
     color: white;
 }
@@ -22,16 +22,40 @@ a {
 /* global FA icon styling */
 [class*="fa-"] {
     color: white;
+    transition: 0.1s;
 }
 
 /* portfolio page header */
 .page-header {
     font-size: 1.5rem;
-    padding: 1rem 2rem;
+    padding: 1.5rem 7.5rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-h1 {
+.page-header > * {
     margin: 0 auto;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-links a:hover i {
+    color: rgb(140, 242, 255);
+}
+
+.link-divider {
+    width: 0.1rem;
+    height: 1rem;
+    background: white;
+    margin: auto 1.5rem;
+}
+
+.contact {
+    font-family: inherit;
 }
 
 /* projects container */
