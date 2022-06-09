@@ -17,7 +17,7 @@ const faLink = (link) => {
  * @returns String representation of span elements for each character
  */
 const textWave = (text, speed) => {
-    return text.split('').map((char, i) => char = char === ' ' ? '&nbsp' : `<span style="--i:${speed === 'fast' ? i-(0.5*i) : i }">${char}</span>`).join('');
+    return text.split('').map((char, i) => char = char === ' ' ? '&nbsp' : `<span style="--i:${speed === 'fast' ? i - (0.5 * i) : i}">${char}</span>`).join('');
 }
 
 /**

@@ -67,7 +67,7 @@ const projects = {
         }
     ],
     "featuredProject": {
-        
+
     },
     "projectTemplate": {
         "date": "",
