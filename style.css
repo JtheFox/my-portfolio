@@ -144,10 +144,31 @@ main {
     padding: 2rem 0;
 }
 
-.projects > h2 {
+/*  */
+.projects > h2.wavy {
     font-size: 2rem;
     text-shadow: -0.2rem 0.2rem 1rem black;
     margin: 0;
+}
+
+.wavy span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+}
+
+.wavy:hover span {
+    animation: wavy 1s;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes wavy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-0.5rem)
+    }
 }
 
 /* project cards */

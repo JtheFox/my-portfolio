@@ -1,5 +1,6 @@
 const myLinks = myLinksJSON;
 const projectData = projectsJSON;
+const projectsH2 = 'My Projects';
 
 $(function () {
     $('.header-links').append($(myLinks.links.map(link => newLink(link)).join('')));
@@ -7,6 +8,8 @@ $(function () {
     projectData.projects.forEach(project => {
         $('.project-cards').append(newCard(project));
     });
+
+    $('.projects > h2.wavy').append(createHoverWavy(projectsH2, 'fast'));
 });
 
 function newLink(link) {
@@ -14,6 +17,10 @@ function newLink(link) {
         <a href="${link.url}"${link.active ? '' : ' class="disabled"'}><i class="${link.fa_icon} fa-lg"></i></a>
         <span class="link-tooltiptext">${link.description.replace(' ', '&nbsp;')}</span>
     </div>`;
+}
+
+function createHoverWavy(text, speed) {
+    return text.split('').map((char, i) => char = char === ' ' ? '&nbsp' : `<span style="--i:${speed === 'fast' ? i-(0.5*i) : i }">${char}</span>`).join('');
 }
 
 function newCard(project) {
