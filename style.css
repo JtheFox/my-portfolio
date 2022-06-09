@@ -113,6 +113,9 @@ a {
 /* project cards */
 .card-list {
     display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .card {
