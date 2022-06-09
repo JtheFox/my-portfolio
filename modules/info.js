@@ -1,4 +1,4 @@
-const myLinksJSON = {
+const links = {
     "links": [
         {
             "name": "Github",
@@ -31,7 +31,7 @@ const myLinksJSON = {
     }
 }
 
-const projectsJSON = {
+const projects = {
     "projects": [
         {
             "date": "April 2022",
@@ -78,3 +78,5 @@ const projectsJSON = {
         "keywords": []
     }
 }
+
+export { links, projects };
