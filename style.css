@@ -1,22 +1,22 @@
 /* global elements */
 :root {
-    font-family: monospace, monospace;
     --primary: rgb(20, 20, 26);
     --secondary: rgb(27, 27, 41);
     --bg-gradient: linear-gradient(180deg, var(--secondary) 10%, var(--primary) 40%, var(--primary) 70%, var(--secondary) 90%)  no-repeat center center fixed;
+    font-family: monospace, monospace;
 }
 
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     background-color: var(--secondary);
     background-size: cover;
     color: white;
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 /* global FA icon styling */
@@ -27,10 +27,10 @@ a {
 
 /* portfolio page header */
 .page-header {
-    font-size: 1.5rem;
-    padding: 1.5rem 7.5rem;
     display: flex;
     justify-content: space-between;
+    padding: 1.5rem 7.5rem;
+    font-size: 1.5rem;
 }
 
 .page-header > * {
@@ -40,30 +40,31 @@ a {
 /* personal links */
 .header-links {
     display: flex;
+    flex-grow: 1;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
 }
 
 .link-tooltip {
+    display: flex;
     position: relative;
-    display: inline-block;
+    flex-direction: column;
+    align-items: center;
 }
 
 .link-tooltip .link-tooltiptext {
-    font-size: 1rem;
-    overflow-wrap: normal;
     visibility: hidden;
-    background-color: var(--primary);
-    opacity: 90%;
-    color: #fff;
-    text-align: center;
-    border-radius: 0.25rem;
-    padding: 0.15rem 0.45rem;
-    position: absolute;
-    left: -2rem;
-    bottom: -125%;
     z-index: 1;
+    position: absolute;
+    bottom: -125%;
+    padding: 0.15rem 0.45rem;
+    border-radius: 0.25rem;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    overflow-wrap: normal;
+    opacity: 90%;
 }
 
 .link-tooltip:hover .link-tooltiptext {
@@ -77,8 +78,8 @@ a {
 .link-divider {
     width: 0.1rem;
     height: 1rem;
-    background: white;
     margin: auto 1.5rem;
+    background: white;
 }
 
 /* contact me button */
@@ -105,15 +106,15 @@ a {
 
 .card {
     display: flex;
-    flex-direction: column;
     position: relative;
-    height: 300px;
-    min-height: 250px;
+    flex-direction: column;
     width: 250px;
     min-width: 200px;
+    height: 300px;
+    min-height: 250px;
     padding: 1.5rem 2rem;
-    background-color: var(--primary);
     border-radius: 1rem;
+    background-color: var(--primary);
     box-shadow: -1rem 0 3rem #000;
     transition: 0.2s ease-in-out;
 }
@@ -159,22 +160,22 @@ a {
 
 /* card body */
 .card-body {
-    padding: 1rem 0;
-    flex-grow: 1;
     display: flex;
-    justify-content: center;
+    flex-grow: 1;
     align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
 }
 
 .card-body img {
     width: auto;
     max-width: 105%;
     height: auto;
+    height: auto;
     max-height: 150px;
+    margin-left: -0.25rem;
     border-radius: 0.5rem;
     opacity: 75%;
-    margin-left: -0.25rem;
-    height: auto;
     transition: 0.1s;
 }
 
@@ -211,8 +212,8 @@ a {
 }
 
 .card-keywords > p {
-    color: #FFF;
     margin: 0;
+    color: #FFF;
 }
 
 .card-keywords > p:not(:last-child) {
