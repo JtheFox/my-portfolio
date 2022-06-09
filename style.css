@@ -103,7 +103,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
+    padding: 2rem 0;
 }
 
 .projects > h2 {
@@ -113,9 +113,10 @@ a {
 /* project cards */
 .card-list {
     display: flex;
-    /* max-width: 100%;
+    padding: 3rem;
+    max-width: 100%;
     overflow-x: auto;
-    overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 .card {
