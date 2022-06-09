@@ -50,6 +50,7 @@ a {
     position: relative;
     flex-direction: column;
     align-items: center;
+    margin: auto 1.5rem;
 }
 
 .link-tooltip .link-tooltiptext {
@@ -75,16 +76,26 @@ a {
     color: rgb(140, 242, 255);
 }
 
-.link-divider {
-    width: 0.1rem;
-    height: 1rem;
-    margin: auto 1.5rem;
-    background: white;
-}
-
 /* contact me button */
 .contact {
-    font-family: inherit;
+    display: flex;
+    align-items: center;
+    border: 0.15rem solid rgba(255, 255, 255, 0.5);
+    opacity: 85%;
+    background-color: inherit;
+    padding: 0 0.75rem;
+    border-radius: 1.5rem;
+    transition: 0.2s;
+}
+
+.contact:hover {
+    opacity: 100%;
+    border-color: white;
+    background-color: var(--primary);
+}
+
+.contact:active {
+    transform: translate(-0.1rem, 0.1rem);
 }
 
 /* projects container */
