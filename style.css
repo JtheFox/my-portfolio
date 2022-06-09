@@ -30,18 +30,45 @@ a {
     font-size: 1.5rem;
     padding: 1.5rem 7.5rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .page-header > * {
     margin: 0 auto;
 }
 
+/* personal links */
 .header-links {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
 }
+
+.link-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.link-tooltip .link-tooltiptext {
+    font-size: 1rem;
+    overflow-wrap: normal;
+    visibility: hidden;
+    background-color: var(--primary);
+    opacity: 90%;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.25rem;
+    padding: 0.15rem 0.45rem;
+    position: absolute;
+    left: -2rem;
+    bottom: -125%;
+    z-index: 1;
+}
+
+.link-tooltip:hover .link-tooltiptext {
+    visibility: visible;
+  }
 
 .header-links a:hover i {
     color: rgb(140, 242, 255);
@@ -54,6 +81,7 @@ a {
     margin: auto 1.5rem;
 }
 
+/* contact me button */
 .contact {
     font-family: inherit;
 }
