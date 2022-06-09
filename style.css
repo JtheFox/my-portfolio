@@ -301,11 +301,6 @@ footer {
     display: inline-block;
 }
 
-.wavy:hover span {
-    animation: wavy 1s;
-    animation-delay: calc(.1s * var(--i));
-}
-
 @keyframes wavy {
     0%,40%,100% {
       transform: translateY(0)
@@ -313,6 +308,30 @@ footer {
     20% {
       transform: translateY(-0.5rem)
     }
+}
+
+.wavy:hover span {
+    animation: wavy 1s;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes flashy {
+    0%,40%,100% {
+      color: inherit;
+    }
+    20% {
+      color: aqua;
+    }
+}
+
+.flashy:hover span {
+    animation: flashy 1s;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.wavy.flashy:hover span {
+    animation: wavy 1s, flashy 1s;
+    animation-delay: calc(.1s * var(--i));
 }
 
 /* TODO: more mobile formatting */
