@@ -3,13 +3,14 @@ const projectData = projectsJSON;
 const projectsH2 = 'My Projects';
 
 $(function () {
+    // add personal links to header
     $('.header-links').append($(myLinks.links.map(link => newLink(link)).join('')));
-
+    // add projects to showcase
     projectData.projects.forEach(project => {
         $('.project-cards').append(newCard(project));
     });
-
-    $('.projects > h2.wavy').append(createHoverWavy(projectsH2, 'fast'));
+    // create cool & fun wavy text
+    $('.projects > h2').append(createHoverWavy(projectsH2, 'fast'));
 });
 
 function newLink(link) {
