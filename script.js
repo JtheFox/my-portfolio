@@ -10,4 +10,6 @@ $(function () {
     });
     // create cool & fun wavy text
     $('.projects > h2').append(textWave('My Projects', 'fast'));
+    // position project showcase scrollbar in the middle on mobile devices
+    $('.card-list').scrollLeft($('.card').width());
 });
