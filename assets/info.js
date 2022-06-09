@@ -9,7 +9,7 @@ const myLinksJSON = {
         {
             "name": "LinkedIn",
             "description": "My LinkedIn",
-            "url": "https://www.linkedin.com/in/jason-fox-878262197/",
+            "url": "#",
             "fa_icon": "fa-brands fa-linkedin"
         },
         {
