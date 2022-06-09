@@ -11,7 +11,7 @@ $(function () {
 
 function newLink(link) {
     return `<div class="link-tooltip">
-        <a href="${link.url}"><i class="${link.fa_icon} fa-lg"></i></a>
+        <a href="${link.url}"${link.active ? '' : ' class="disabled"'}><i class="${link.fa_icon} fa-lg"></i></a>
         <span class="link-tooltiptext">${link.description.replace(' ', '&nbsp;')}</span>
     </div>`;
 }

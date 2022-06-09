@@ -4,18 +4,21 @@ const myLinksJSON = {
             "name": "Github",
             "description": "My Github",
             "url": "https://github.com/JtheFox/",
+            "active": true,
             "fa_icon": "fa-brands fa-github"
         },
         {
             "name": "LinkedIn",
             "description": "My LinkedIn",
-            "url": "#",
+            "url": "https://www.linkedin.com/in/jason-fox-878262197/",
+            "active": false,
             "fa_icon": "fa-brands fa-linkedin"
         },
         {
             "name": "Resume",
             "description": "My CV",
             "url": "#",
+            "active": false,
             "fa_icon": "fa-solid fa-file-lines"
         }
     ],
@@ -23,6 +26,7 @@ const myLinksJSON = {
         "name": "",
         "description": "",
         "url": "",
+        "active": true,
         "fa_icon": ""
     }
 }

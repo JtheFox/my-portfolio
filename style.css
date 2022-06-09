@@ -80,6 +80,16 @@ a {
     color: aqua;
 }
 
+/* disabled links */
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+a.disabled i {
+    color: var(--tertiary);
+}
+
 /* contact me button */
 .contact {
     display: flex;
@@ -101,7 +111,7 @@ a {
 .contact:active {
     transform: translate(-0.1rem, 0.1rem);
 }
-/* end footer */
+/* end header */
 /* begin main */
 main {
     flex-grow: 1;
