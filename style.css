@@ -144,7 +144,7 @@ main {
     padding: 2rem 0;
 }
 
-/*  */
+/* project showcase title */
 .projects > h2 {
     font-size: 2rem;
     text-shadow: -0.2rem 0.2rem 1rem black;
@@ -268,12 +268,13 @@ main {
 
 .card-keywords {
     display: flex;
+    flex-wrap: wrap;
     margin: 1rem 0 0 -0.5rem;
     opacity: 75%;
 }
 
 .card-keywords > p {
-    margin: 0;
+    margin: 0 0 0.25rem;
     color: #FFF;
 }
 
