@@ -7,11 +7,11 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
     background-color: var(--primary);
     background-size: cover;
     color: white;
@@ -82,8 +82,8 @@ a {
 
 /* disabled links */
 a.disabled {
-    pointer-events: none;
     cursor: default;
+    pointer-events: none;
 }
 
 a.disabled i {
@@ -94,18 +94,18 @@ a.disabled i {
 .contact {
     display: flex;
     align-items: center;
-    border: 0.15rem solid rgba(255, 255, 255, 0.5);
-    opacity: 85%;
-    background-color: inherit;
     padding: 0 0.75rem;
+    border: 0.15rem solid rgba(255, 255, 255, 0.5);
     border-radius: 1.5rem;
+    background-color: inherit;
+    opacity: 85%;
     transition: 0.2s;
 }
 
 .contact:hover {
-    opacity: 100%;
     border-color: white;
     background-color: var(--secondary);
+    opacity: 100%;
 }
 
 .contact:active {
@@ -126,9 +126,9 @@ main {
 .about img {
     width: 128px;
     height: auto;
-    border-radius: 50%;
-    border: 0.2rem solid white;
     margin-right: 1.5rem;
+    border: 0.2rem solid white;
+    border-radius: 50%;
     box-shadow: -0.25rem 0.25rem 1rem black;
 }
 
@@ -146,19 +146,38 @@ main {
 
 /* project showcase title */
 .projects > h2 {
+    margin: 0;
     font-size: 2rem;
     text-shadow: -0.2rem 0.2rem 1rem black;
-    margin: 0;
+}
+
+.projects small {
+    display: none;
 }
 
 /* project cards */
 .card-list {
     display: flex;
-    padding: 3rem;
     max-width: 100%;
+    margin-left: 1.5rem;
+    padding: 3rem;
     overflow-x: auto;
     overflow-y: hidden;
-    margin-left: 1.5rem;
+}
+
+.card-list::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+.card-list::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background: var(--secondary);
+    box-shadow: inset 0.2rem 0.2rem 0.2rem rgba(55, 55, 85, 0.25), inset -0.2rem -0.2rem 0.2rem rgba(0, 0, 15,.25);
+}
+
+.card-list::-webkit-scrollbar-track {
+    box-shadow: inset 0.2rem 0.2rem 0.2rem rgba(0, 0, 15,.25), inset -0.2rem -0.2rem 0.2rem rgba(0, 0, 15,.25);;
+    border-radius: 0.5rem;
 }
 
 .card {
@@ -174,27 +193,6 @@ main {
     background-color: var(--secondary);
     box-shadow: -1rem 0 3rem #000;
     transition: 0.2s ease-in-out;
-}
-
-.card:not(:first-child) {
-    margin-left: -3rem;
-}
-
-.card:hover {
-    transform: translateY(-1rem);
-}
-
-.card:hover~.card {
-    transform: translateX(3rem);
-}
-
-.card > * {
-    opacity: 80%;
-    transition: 0.2s ease-in;
-}
-
-.card:hover > * {
-    opacity: 100%;
 }
 
 /* card child elements */
@@ -297,16 +295,16 @@ footer {
 
 /* global animation styling */
 .wavy span {
-    position: relative;
     display: inline-block;
+    position: relative;
 }
 
 @keyframes wavy {
     0%,40%,100% {
-      transform: translateY(0)
+      transform: translateY(0);
     }
     20% {
-      transform: translateY(-0.5rem)
+      transform: translateY(-0.5rem);
     }
 }
 
@@ -334,9 +332,80 @@ footer {
     animation-delay: calc(.1s * var(--i));
 }
 
+@media only screen and (min-width: 992px) {
+    /* card hover animations only on large devices */
+    .card:not(:first-child) {
+        margin-left: -3rem;
+    }
+    
+    .card:hover {
+        transform: translateY(-1rem);
+    }
+    
+    .card:hover~.card {
+        transform: translateX(3rem);
+    }
+    
+    .card > * {
+        opacity: 80%;
+        transition: 0.2s ease-in;
+    }
+    
+    .card:hover > * {
+        opacity: 100%;
+    }
+}
+
 /* TODO: more mobile formatting */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
+    /* header section */
     .page-header {
+        flex-wrap: wrap;
+        padding: 0.5rem;
+    }
+
+    .page-header > h2 {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .header-links {
+        flex-grow: 0;
+    }
+
+    .link-tooltip {
+        margin: 0 0.75rem;
+    }
+
+    /* about section */
+    .about {
         flex-direction: column;
+        margin: 0;
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+
+    .about img {
+        max-width: 33%;
+        margin: 0;
+    }
+
+    /* project showcase */
+    .projects {
+        padding-top: 0;
+    }
+
+    /* project cards container */
+    .card-list {
+        width: 80%;
+        margin: 1rem 0;
+        padding: 0 10% 0.75rem;
+    }
+
+    /* project cards */
+    .card {
+        box-shadow: -1.5rem 0.5rem 1.5rem -1rem black;
+        margin-left: -0.5rem;
     }
   }
