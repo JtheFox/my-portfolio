@@ -91,7 +91,7 @@ a {
 .contact:hover {
     opacity: 100%;
     border-color: white;
-    background-color: var(--primary);
+    background-color: var(--secondary);
 }
 
 .contact:active {
@@ -245,3 +245,10 @@ a {
     border-radius: 1rem;
     background: rgba(255, 255, 255, 0.05);
 }
+
+/* TODO: more mobile formatting */
+@media only screen and (max-width: 600px) {
+    .page-header {
+        flex-direction: column;
+    }
+  }
