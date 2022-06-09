@@ -35,7 +35,7 @@ function newCard(project) {
                 <p>Repository</p>
             </a>
             <div class="card-keywords">
-                ${project.keywords.map(kw => `<p>${kw}</p>`).join('\n')}
+                ${project.keywords.map(kw => `<p>${kw.replace(' ', '&nbsp;')}</span>}</p>`).join('\n')}
             </div>
         </div>
     </article>`);
