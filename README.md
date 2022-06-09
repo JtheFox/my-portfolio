@@ -1,1 +1,1 @@
-# [my-portfolio](https://jthefox.github.io/my-portfolio/)
+# [My Portfolio](https://jthefox.github.io/my-portfolio/)
