@@ -1,12 +1,11 @@
-const myLinks = myLinksJSON;
-const projectData = projectsJSON;
+import { links as myLinks, projects as myProjects } from './assets/info.js'
 const projectsH2 = 'My Projects';
 
 $(function () {
     // add personal links to header
     $('.header-links').append($(myLinks.links.map(link => newLink(link)).join('')));
     // add projects to showcase
-    projectData.projects.forEach(project => {
+    myProjects.projects.forEach(project => {
         $('.project-cards').append(newCard(project));
     });
     // create cool & fun wavy text
