@@ -71,7 +71,7 @@ const projects = {
             "image": "https://raw.githubusercontent.com/JtheFox/blastoff/main/public/images/launch.png",
             "live": "https://blastoff2.herokuapp.com/",
             "repo": "https://github.com/JtheFox/blastoff",
-            "keywords": ["Express", "Handlebars", "Sequelize"]]
+            "keywords": ["Express", "Handlebars", "Sequelize"]
         },
     ],
     "featuredProject": {
