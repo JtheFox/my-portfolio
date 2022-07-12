@@ -64,7 +64,15 @@ const projects = {
             "live": "https://jthefox.github.io/somewhere-project/",
             "repo": "https://github.com/JtheFox/somewhere-project",
             "keywords": ["HTML", "CSS", "jQuery"]
-        }
+        },
+        {
+            "date": "Julu 2022",
+            "title": "Blastoff",
+            "image": "https://raw.githubusercontent.com/JtheFox/blastoff/main/public/images/launch.png",
+            "live": "https://blastoff2.herokuapp.com/",
+            "repo": "https://github.com/JtheFox/blastoff",
+            "keywords": ["Express", "Handlebars", "Sequelize"]]
+        },
     ],
     "featuredProject": {
 
