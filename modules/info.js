@@ -66,7 +66,7 @@ const projects = {
             "keywords": ["HTML", "CSS", "jQuery"]
         },
         {
-            "date": "Julu 2022",
+            "date": "July 2022",
             "title": "Blastoff",
             "image": "https://raw.githubusercontent.com/JtheFox/blastoff/main/public/images/launch.png",
             "live": "https://blastoff2.herokuapp.com/",
