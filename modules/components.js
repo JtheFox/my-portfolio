@@ -16,9 +16,7 @@ const faLink = (link) => {
  * @param {string} [speed] - 'fast' to increase animation speed 
  * @returns String representation of span elements for each character
  */
-const textWave = (text, speed) => {
-    return text.split('').map((char, i) => char = char === ' ' ? '&nbsp' : `<span style="--i:${speed === 'fast' ? i - (0.5 * i) : i}">${char}</span>`).join('');
-}
+const textWave = (text, speed) => text.split('').map((char, i) => char = char === ' ' ? '&nbsp' : `<span style="--i:${speed === 'fast' ? i - (0.5 * i) : i}">${char}</span>`).join('');
 
 /**
  * Creates a card display of a project
