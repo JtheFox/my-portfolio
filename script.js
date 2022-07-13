@@ -1,7 +1,7 @@
 import { links as myLinks, projects as myProjects } from './assets/info.js'
 import { faLink, textWave, projectCard } from './modules/components.js'
 
-$(function () {
+$(() => {
     // add personal links to header
     $('.header-links').append($(myLinks.map(link => faLink(link)).join('')));
     // add projects to showcase
