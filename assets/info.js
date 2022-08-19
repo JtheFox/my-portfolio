@@ -34,7 +34,7 @@ const projects = [
     {
         "date": "April 2022",
         "title": "Chopping Block",
-        "image": "https://i.imgur.com/Y5MsQDC.png",
+        "image": "https://i.imgur.com/boSEAIT.png",
         "live": "#",
         "repo": "https://github.com/FidelHen/Chopping-Block",
         "keywords": ["React Native", "Firebase"]
